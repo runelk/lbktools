@@ -1,0 +1,228 @@
+{
+  "columns": [
+    "pos", "type", "grade+dia", "tense+defin", "mood+case", "person+type2", "number", "gender", "extra"
+  ],
+  "conversions": [
+    "adv": {
+      "pos": "adv"
+    },
+    "inf-merke": {
+      "pos": "infmark"
+    },
+    "interj": {
+      "pos": "interj"
+    },
+    "konj": {
+      "pos": "conj"
+    },
+    "ukjent": {
+      "pos": "unknown"
+    },
+    "sbu": {
+      "pos": "subj"
+    },
+    "verb": {
+      "pos": "v"
+    },
+    "subst": {
+      "pos": "n"
+    },
+    "pron": {
+      "pos": "pron"
+    },
+    "det": {
+      "pos": "det"
+    },
+    "adj": {
+      "pos": "adj"
+    },
+    "prep": {
+      "pos": "prep"
+    },
+    "{komma}": {
+      "pos": "punct",
+      "type": "comma"
+    },
+    "{punkt}": {
+      "pos": "punct",
+      "type": "period"
+    },
+    "{anf}": {
+      "pos": "punct",
+      "type": "cit"
+    },
+    "{overskrift}": {
+      "pos": "punct",
+      "type": "heading"
+    },
+    "{kolon}": {
+      "pos": "punct",
+      "type": "colon"
+    },
+    "{semi}": {
+      "pos": "punct",
+      "type": "semicolon"
+    },
+    "{parentes-beg}": {
+      "pos": "punct",
+      "type": "lpar"
+    },
+    "{parentes-slutt}": {
+      "pos": "punct",
+      "type": "rpar"
+    },
+    "{spm}": {
+      "pos": "punct",
+      "type": "question"
+    },
+    "{utrop}": {
+      "pos": "punct",
+      "type": "excl"
+    },
+    "{strek}": {
+      "pos": "punct",
+      "type": "dash"
+    },
+    "{ellipse}": {
+      "pos": "punct",
+      "type": "ellipsis"
+    },
+
+    "{perf-part}": {
+      "person+type2": "pcp2"
+    },
+    "{pres-part}": {
+      "person+type2": "pcp1"
+    },
+    "{ordenstall}": {
+      "type": "ord"
+    },
+    "{romertall}": {
+      "type": "roman"
+    },
+    "kvant": {
+      "type": "quant"
+    },
+    "forst": {
+      "type": "emph"
+    },
+    "poss": {
+      "type": "poss"
+    },
+    "dem": {
+      "type": "dem"
+    },
+    "sp": {
+      "type": "question"
+    },
+    "høflig": {
+      "type": "polite"
+    },
+    "pers": {
+      "type": "pers"
+    },
+    "refl": {
+      "type": "refl"
+    },
+    "resipr": {
+      "type": "resip"
+    },
+    "hum": {
+      "type": "hum"
+    },
+    "appell": {
+      "type": "c"
+    },
+    "prop": {
+      "type": "p"
+    },
+    "ubøy": {
+      "type": "noconj"
+    },
+    "perf-part": {
+      "person+type2": "pcp2"
+    },
+
+    "pos": {
+      "grade+dia": "pos"
+    },
+    "komp": {
+      "grade+dia": "comp"
+    },
+    "sup": {
+      "grade+dia": "sup"
+    },
+    "pass": {
+      "grade+dia": "pass"
+    },
+
+    "be": {
+      "tense+defin": "def"
+    },
+    "ub": {
+      "tense+defin": "indef"
+    },
+    "be/ub": {
+      "tense+defin": "def/indef"
+    },
+    "pres": {
+      "tense+defin": "pres"
+    },
+    "pret": {
+      "tense+defin": "past"
+    },
+    "inf": {
+      "tense+defin": "inf"
+    },
+
+    "nom": {
+      "mood+case": "nom"
+    },
+    "akk": {
+      "mood+case": "acc"
+    },
+    "gen": {
+      "mood+case": "gen"
+    },
+    "imp": {
+      "mood+case": "imp"
+    },
+
+    "1": {
+      "person+type2": "1"
+    },
+    "2": {
+      "person+type2": "2"
+    },
+    "3": {
+      "person+type2": "3"
+    },
+
+    "ent": {
+      "number": "sg"
+    },
+    "fl": {
+      "number": "pl"
+    },
+    "en/fl": {
+      "number": "sg/pl"
+    },
+
+    "fem": {
+      "gender": "f"
+    },
+    "mask": {
+      "gender": "m"
+    },
+    "nøyt": {
+      "gender": "n"
+    },
+    "m/f": {
+      "gender": "m/f"
+    },
+
+    "samset": {
+      "extra": "compound"
+    }
+  ]
+}
