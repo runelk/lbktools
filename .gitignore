@@ -1,1 +1,3 @@
 .venv/
+*.pyc
+.ruffus_history.sqlite
