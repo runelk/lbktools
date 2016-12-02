@@ -2,7 +2,7 @@
   "columns": [
     "pos", "type", "grade+dia", "tense+defin", "mood+case", "person+type2", "number", "gender", "extra"
   ],
-  "conversions": [
+  "conversions": {
     "adv": {
       "pos": "adv"
     },
@@ -224,5 +224,5 @@
     "samset": {
       "extra": "compound"
     }
-  ]
+  }
 }
