@@ -1,6 +1,6 @@
 import json
 import re
-
+import codecs
 
 def load_config(filename):
     with open(filename) as f:
@@ -38,29 +38,34 @@ def make_row(word, attributes, column_dict):
     return row
 
 
-def parse_cg3(filename, config):
+def parse_cg3(filename_in, filename_out, config):
     rx_word = re.compile("<word>(.*?)</word>")
     column_dict = make_column_dict(config)
 
-    with open(filename) as f:
-        current_word = None
+    with codecs.open(filename_out, 'w', 'utf-8') as fout:
+        with codecs.open(filename_in, 'r', 'utf-8') as fin:
+            current_word = None
 
-        for line in f:
+            for line in fin:
 
-            # Extract attributes from lines beginning with TAB
-            if line.startswith("\t"):
-                attributes = parse_attributes(line, config)
-                row = make_row(current_word, attributes, column_dict)
-                print "\t".join([item.decode('utf-8') if item else '' for item in row])
-                continue
+                # Empty line signifies sentence end
+                if not line.strip():
+                    fout.write("\n")
 
-            #################################################################
-            # NB: We're ignoring lines that:
-            #     - do not begin with TAB
-            #     - do not contain a <word> tag
-            # Remember to supply the -wxml argument to mtag for this to work
-            #################################################################
+                # Extract attributes from lines beginning with TAB
+                if line.startswith("\t"):
+                    attributes = parse_attributes(line, config)
+                    row = make_row(current_word, attributes, column_dict)
+                    fout.write("\t".join([item if item else '' for item in row]) + "\n")
+                    continue
 
-            rx = rx_word.search(line.strip())
-            if (rx):
-                current_word = rx.group(1)
+                #################################################################
+                # NB: We're ignoring lines that:
+                #     - do not begin with TAB
+                #     - do not contain a <word> tag
+                # Remember to supply the -wxml argument to mtag for this to work
+                #################################################################
+
+                rx = rx_word.search(line.strip())
+                if (rx):
+                    current_word = rx.group(1)
